@@ -4,6 +4,19 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'dart:ui' as ui;
 
+/// A widget that applies a grain filter to its child.
+/// 
+/// The grain filter is animated by default. To disable the animation, set
+/// [animated] to false.
+/// 
+/// The grain filter is applied using a [ShaderMask] widget. The [ShaderMask]
+/// widget is applied using a [Shader] that is created from an [ImageShader].
+/// The [ImageShader] is created from an [Image] that is loaded from an asset.
+/// 
+/// [child] is the widget that the grain filter is applied to.
+/// [frameDuration] is the duration between each frame of the animation.
+/// [scale] is the scale of the grain filter. The default value is 0.3.
+/// [animated] is whether the grain filter is animated. The default value is true.
 class GrainFiltered extends StatefulWidget {
   final Widget child;
   final bool animated;
